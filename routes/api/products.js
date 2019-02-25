@@ -87,7 +87,7 @@ router.get("/:id", (req, res) => {
     .then(product => {
       res.json(product);
     })
-    .catch(err => res.status(404).json({ error: "No reviews found" }));
+    .catch(err => res.status(404).json({ error: "No products found" }));
 });
 
 //@route DELETE api/products/:id
@@ -110,9 +110,9 @@ router.delete(
           .then(() => {
             res.json({ success: true });
           })
-          .catch(err => res.status(404).json({ error: "Post not found" }));
+          .catch(err => res.status(404).json({ error: "Product not found" }));
       })
-      .catch(err => res.status(404).json({ error: "No reviews found" }));
+      .catch(err => res.status(404).json({ error: "No products found" }));
   }
 );
 

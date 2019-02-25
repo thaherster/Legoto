@@ -107,7 +107,7 @@ router.delete(
           .then(() => {
             res.json({ success: true });
           })
-          .catch(err => res.status(404).json({ error: "Post not found" }));
+          .catch(err => res.status(404).json({ error: "Review not found" }));
       })
       .catch(err => res.status(404).json({ error: "No reviews found" }));
   }
